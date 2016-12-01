@@ -4,7 +4,8 @@ classdef Robot
         comm_range
         map 
         position
-        velocity
+        %velocity
+        prev
     end
     
     methods
@@ -14,7 +15,8 @@ classdef Robot
             %comm is the communication range
             R.map = zeros(n,m);
             R.position = i;
-            R.velocity = 0;
+            R.prev = [i(1)-1, i(2)];
+            %.velocity = 0;
             R.comm_range = comm;
         end
         

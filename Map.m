@@ -19,16 +19,16 @@ for j=2:1:m-1
 end
 
 %array of potential starting positions, beginning lower left
-for k= 1:1:m
-    for l = n:-1:1
+for k= 1:1:n
+    for l = m:-1:1
         if maps(k,l) == 1
-            start=[start l];
-            starty=[starty k];
+            starty=[start l];
+            start=[starty k];
         end
     end 
 end
 y = maps;
-figure(2)
+figure(3)
 image(y.*15);
 title('Map')
 end

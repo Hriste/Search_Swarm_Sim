@@ -53,10 +53,6 @@ function [move,map] = Move(birdseye,map,position,local)
         end
     else
         new = Frontier_Find(map,position,local) ;
-        if isempty(new)
-            new(1) = x;
-            new(2) = y;
-        end
         position = [new(1), new(2)];
         
     end

@@ -70,7 +70,7 @@ while(1)
         end
         %update object parameters
         map(move(1), move(2)) = 4;
-        map = Comm(local,pos,robots,map,num);
+        map = Comm(local,pos,robots,
         robots(j).map = map;
         figure(j+1);
         image(map.*15);
