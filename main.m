@@ -33,6 +33,7 @@ title('Intial Setup');
 iteration = 0;
 done = 1;
 X=1;
+dead = DEATH(width);
 while(1)
    % X = input('enter a number if you whish to continue, or enter 0 to exit');
     iteration = iteration + 1;
@@ -50,7 +51,7 @@ while(1)
         pos = robots(j).position;
         prev = current.prev;
         [~,local] = Collide(robots, pos);
-        map = Comm(local,pos,robots,map,j);
+        map = Comm(local,pos,robots,map,j,dead);
         
         [move,map] = Move(actual,map,pos,local);
         %check to see if move will result in a collision
@@ -99,7 +100,7 @@ while(1)
     
 %update object parameters
         map(move(1), move(2)) = 4;
-        map = Comm(local,pos,robots,map,num);
+        map = Comm(local,pos,robots,map,num,dead);
         robots(j).map = map;
         figure(j+1);
         image(map.*15);
