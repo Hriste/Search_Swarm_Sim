@@ -6,6 +6,7 @@ classdef Robot
         position
         %velocity
         prev
+        stuck
     end
     
     methods
@@ -18,6 +19,7 @@ classdef Robot
             R.prev = [i(1)-1, i(2)];
             %.velocity = 0;
             R.comm_range = comm;
+            R.stuck = 6;
         end
         
 
