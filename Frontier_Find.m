@@ -50,8 +50,12 @@ function s = Frontier_Find(map, pos,local)
     [~,I]=min(distances);
     %distances(I) = 1000;
     %[~,I]=min(distances);
-     s = [next(I,1),next(I,2)];
+     if size(next) == [0,0]
+           s = int16.empty();
     
+     else
+         s = [next(I,1),next(I,2)];
+     end
    
     %%%%%
 %     for i = 1:1:halt

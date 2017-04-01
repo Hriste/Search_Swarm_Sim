@@ -2,7 +2,6 @@ function [move,map, FLAG] = Move(birdseye,map,position,local)
     x = position(1);
     y = position(2);
     FRONT = 0;
-    FLAG = 0;
     map(x,y) = 1;  % Mark current cell as free
     %mark neighbors as wall or frontier
     for i = -1:2:1
@@ -58,7 +57,7 @@ function [move,map, FLAG] = Move(birdseye,map,position,local)
             new(1) = x;
             new(2) = y;
             FLAG = 1;
-        end
+        e
         position = [new(1), new(2)];
         
     end

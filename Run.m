@@ -1,9 +1,8 @@
-%close all;
-clear all;
-num = 3;%input('input the number of robots ') ;
-width = 17;%input('input the width of the map ');
-height = 17;%input('input the height of the map ');
-comm_range = 2;%input('input communication range');
+function time = Run(a,net,agents)
+num = agents;%input('input the number of robots ') ;
+width = a;%input('input the width of the map ');
+height = a;%input('input the height of the map ');
+comm_range = net;%input('input communication range');
 actual = Map(width,height);
 finish_case = actual;
 finish_case(1,1) = 0;
@@ -88,4 +87,5 @@ end
 
 
 final = Result(robots);
-iteration
+time = iteration;
+end
