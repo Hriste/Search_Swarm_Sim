@@ -28,26 +28,12 @@ function [move,map, FLAG] = Move(birdseye,map,position,local)
     %if known frontier is in "area"
     if FRONT == 1
         % order of precedence of movement - {foward, left, right,
-        % rear
-        q=any(~ismember(local,[x,y+1]));
-        w=any(~ismember(local,[x,y+2]));
-        r=any(~ismember(local,[x+1,y+1]));
-        t=any(~ismember(local,[x-1,y+1]));
-        
-        u= any(~ismember(local,[x-1,y]));
-        o= any(~ismember(local,[x-2,y]));
-        p= any(~ismember(local,[x-1,y-1]));
-        f= any(~ismember(local,[x-1,y+1]));
-        
-        g= any(~ismember(local,[x+1,y]));
-        h= any(~ismember(local,[x+2,y]));
-        n= any(~ismember(local,[x+1,y-1]));
-        m= any(~ismember(local,[x+1,y+1]));
-        if map(x,y+1)==3%&&q(1)&&q(2)&&w(1)&&w(2)&&r(1)&&r(2)&&t(1)&&t(2)
+        %rear}
+        if map(x,y+1)==3
             position= [x,y+1];
-        elseif map(x-1,y)==3%&&u(1)&&u(2)&&o(1)&&o(2)&&p(1)&&p(2)&&f(1)&&f(2)
+        elseif map(x-1,y)==3
             position= [x-1,y];
-        elseif map(x+1,y)==3%&&g(1)&&g(2)&&h(1)&&h(2)&&n(1)&&n(2)&&m(1)&&m(2)
+        elseif map(x+1,y)==3
             position= [x+1,y];
         elseif map(x,y-1)==3
             position= [x,y-1];

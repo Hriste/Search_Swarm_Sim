@@ -18,8 +18,5 @@ function [final] = Result(robots)
             end
         end
     end
-figure(20);
-image(final.*15)
-title('final returned result')
 end
 

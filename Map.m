@@ -64,8 +64,5 @@ for k= 1:1:n
     end 
 end
 y = maps;
-figure(3)
-image(y.*15);
-title('Map')
 end
 

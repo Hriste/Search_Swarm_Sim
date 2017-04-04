@@ -31,13 +31,10 @@ for i =1:1:num
     %make robot instances
     robots = [robots Robot(width,height,inital,comm_range)];
 end
-figure(1)
-image(actual.*15)
-title('Intial Setup');
 iteration = 0;
 done = 1;
 X=1;
-%dead = DEATH(width);
+dead = DEATH(width);
 check = 0;
 while(check == 0)
    
@@ -71,8 +68,7 @@ while(check == 0)
         map(move(1), move(2)) = 1;
         map = Comm(local,pos,robots,map,num,dead);
         robots(j).map = map;
-        figure(j+1);
-        image(map.*15);
+  
         robots(j).position = move;
         robots(j).prev = pos;
         robots(j).stuck = FLAG;

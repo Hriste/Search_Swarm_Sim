@@ -48,8 +48,6 @@ function s = Frontier_Find(map, pos,local)
     end
     next;
     [~,I]=min(distances);
-    %distances(I) = 1000;
-    %[~,I]=min(distances);
      if size(next) == [0,0]
            s = int16.empty();
     
@@ -57,17 +55,4 @@ function s = Frontier_Find(map, pos,local)
          s = [next(I,1),next(I,2)];
      end
    
-    %%%%%
-%     for i = 1:1:halt
-%         for k = 1:1:bound
-%             
-%             d = [d, sqrt((free_neighbor(k,2)-front(i,2))^2 - (free_neighbor(k,1)-front(i,1))^2 )];
-%             %currently using shortest distance as crow flies should
-%             %change to shortest free path using algorithm
-%             %(dijkstra)
-%             tags = [tags, k];
-%         end
-%     end
-%     [~,I] = min(d);
-%     s = [free_neighbor(tags(I),1), free_neighbor(tags(I),2)];
 end
