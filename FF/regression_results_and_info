@@ -1,0 +1,40 @@
+Nonlinear regression model:
+    y ~ hougen(b,X)
+    beta0 = [1 1 1 1 1]
+
+Estimated Coefficients:
+           Estimate         SE        tStat       pValue
+          ___________    ________    _______    __________
+
+    b1         53.758    0.042499     1264.9    5.5852e-55
+    b2         3.9044      1.0222     3.8197     0.0009353
+    b3       -0.18085    0.038214    -4.7326    0.00010086
+    b4         2.1458     0.17411     12.324    2.3775e-11
+    b5    -3.6147e+09           0       -Inf             0
+
+
+Number of observations: 25, Error degrees of freedom: 22
+Root Mean Squared Error: 49
+R-Squared: 0.932,  Adjusted R-Squared 0.925
+F-statistic vs. constant model: 150, p-value = 1.55e-13
+
+____
+mdl =
+Nonlinear regression model:
+    y ~ hougen(b,X)
+    beta0 = -1 -1 -1 -1 -1
+Estimated Coefficients:
+           Estimate         SE          tStat         pValue
+          __________    __________    __________    __________
+
+    b1       -83.209      0.062179       -1338.2    1.6173e-55
+    b2       -7.5554       0.83353       -9.0644    6.9888e-09
+    b3       0.23162      0.026714        8.6704    1.5131e-08
+    b4       -3.5059       0.25821       -13.577    3.5825e-12
+    b5    1.2177e+08    9.5004e-19    1.2818e+26             0
+
+
+Number of observations: 25, Error degrees of freedom: 22
+Root Mean Squared Error: 23.7
+R-Squared: 0.984,  Adjusted R-Squared 0.983
+F-statistic vs. constant model: 676, p-value = 1.78e-20
